@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Earnings Report - Financial Institution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal .slides {
+            text-align: left;
+        }
+        .reveal .slides section {
+            padding: 20px;
+        }
+        .contact-info {
+            font-size: 0.8em;
+            color: #64b5f6;
+            margin-top: 20px;
+        }
+        .metric-box {
+            background: rgba(100, 181, 246, 0.2);
+            border-left: 4px solid #64b5f6;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .formula-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section data-markdown>
+                <textarea data-template>
+                    # Q4 2025 Earnings Report
+                    ## Financial Performance & Strategic Outlook
+                    
+                    **Prepared by:** Technical Consulting Division
+                    
+                    **Contact:** 25ds1000013@ds.study.iitm.ac.in
+                    
+                    ---
+                    *Quarterly Stakeholder Presentation*
+                </textarea>
+            </section>
+
+            <!-- Executive Summary -->
+            <section>
+                <h2>Executive Summary</h2>
+                <div class="fragment fade-in">
+                    <div class="metric-box">
+                        <h3>Revenue Growth</h3>
+                        <p>Q4 Revenue: <strong>$2.8B</strong> (↑ 15% YoY)</p>
+                    </div>
+                </div>
+                <div class="fragment fade-in">
+                    <div class="metric-box">
+                        <h3>Net Income</h3>
+                        <p>$420M (↑ 22% YoY)</p>
+                    </div>
+                </div>
+                <div class="fragment fade-in">
+                    <div class="metric-box">
+                        <h3>Operating Margin</h3>
+                        <p>18.5% (↑ 2.3 percentage points)</p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Key highlights: Strong revenue growth driven by digital banking initiatives.
+                    Cost optimization programs delivered margin expansion.
+                    Customer acquisition exceeded targets by 12%.
+                </aside>
+            </section>
+
+            <!-- Financial Metrics with Math -->
+            <section>
+                <h2>Key Financial Ratios</h2>
+                <div class="formula-box">
+                    <h3>Return on Equity (ROE)</h3>
+                    <p>$$ROE = \frac{Net\ Income}{Shareholders'\ Equity} = \frac{420M}{2.8B} = 15\%$$</p>
+                </div>
+                <div class="fragment fade-in formula-box">
+                    <h3>Earnings Per Share (EPS)</h3>
+                    <p>$$EPS = \frac{Net\ Income - Preferred\ Dividends}{Weighted\ Average\ Shares} = \$3.42$$</p>
+                </div>
+                <div class="fragment fade-in formula-box">
+                    <h3>Price-to-Earnings Ratio (P/E)</h3>
+                    <p>$$P/E = \frac{Market\ Price\ Per\ Share}{Earnings\ Per\ Share} = \frac{68.40}{3.42} = 20x$$</p>
+                </div>
+                <aside class="notes">
+                    ROE improved from 13% in Q3 due to improved profitability.
+                    EPS beat analyst consensus of $3.25.
+                    P/E ratio indicates strong market confidence.
+                </aside>
+            </section>
+
+            <!-- Code Sample: API Integration -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Digital Banking API Growth
+                    
+                    Our new payment processing API handled **1.2M transactions/day** in Q4:
+                    
+                    ```python
+                    # Transaction Processing Performance
+                    class TransactionMetrics:
+                        def __init__(self, quarter):
+                            self.quarter = quarter
+                            self.transactions = []
+                        
+                        def calculate_throughput(self):
+                            total_txns = sum(self.transactions)
+                            avg_daily = total_txns / 90  # days in quarter
+                            return {
+                                'total': total_txns,
+                                'daily_avg': avg_daily,
+                                'growth': self.calculate_growth()
+                            }
+                        
+                        def calculate_growth(self):
+                            if self.quarter == 'Q4':
+                                return 0.28  # 28% growth YoY
+                    ```
+                    
+                    **Result:** 28% YoY growth in API transaction volume
+                </textarea>
+            </section>
+
+            <!-- Risk Management Code -->
+            <section>
+                <h2>Risk Management Framework</h2>
+                <p class="fragment fade-in">Implemented advanced risk scoring algorithm:</p>
+                <pre class="fragment fade-in"><code class="language-javascript">// Real-time Risk Assessment Engine
+class RiskScoreCalculator {
+    constructor(transaction) {
+        this.amount = transaction.amount;
+        this.location = transaction.location;
+        this.history = transaction.userHistory;
+    }
+    
+    calculateRiskScore() {
+        let score = 0;
+        
+        // Amount-based risk
+        if (this.amount > 10000) score += 30;
+        else if (this.amount > 5000) score += 15;
+        
+        // Location anomaly detection
+        if (this.isUnusualLocation()) score += 25;
+        
+        // Historical pattern analysis
+        score += this.analyzePatterns();
+        
+        return Math.min(score, 100);
+    }
+    
+    isUnusualLocation() {
+        return !this.history.commonLocations
+            .includes(this.location);
+    }
+}
+</code></pre>
+                <p class="fragment fade-in"><strong>Impact:</strong> Fraud detection improved by 35%</p>
+                <aside class="notes">
+                    This algorithm reduced false positives by 40%.
+                    Saved approximately $8M in potential fraud losses.
+                    Customer satisfaction increased due to fewer transaction blocks.
+                </aside>
+            </section>
+
+            <!-- Strategic Initiatives (Markdown) -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## 2026 Strategic Initiatives
+                    
+                    ### Key Focus Areas
+                    
+                    1. **AI-Powered Customer Service**
+                       - Deploy GPT-4 based chatbots
+                       - Target: 60% automation rate
+                    
+                    2. **Blockchain Integration**
+                       - Cross-border payment settlement
+                       - Expected cost reduction: 40%
+                    
+                    3. **Cybersecurity Enhancement**
+                       - Zero-trust architecture implementation
+                       - Investment: $45M
+                    
+                    4. **ESG Commitments**
+                       - Carbon-neutral operations by Q3 2026
+                       - $100M green financing portfolio
+                    
+                    ---
+                    
+                    *All initiatives approved by Board of Directors*
+                </textarea>
+            </section>
+
+            <!-- Financial Forecast -->
+            <section>
+                <h2>2026 Financial Outlook</h2>
+                <div class="fragment fade-in">
+                    <h3>Revenue Projection Model</h3>
+                    <div class="formula-box">
+                        <p>$$R_{2026} = R_{2025} \times (1 + g) \times (1 + m)$$</p>
+                        <p style="font-size: 0.8em; margin-top: 10px;">
+                            Where:<br>
+                            - $R_{2026}$ = Projected 2026 Revenue<br>
+                            - $g$ = Organic growth rate (12%)<br>
+                            - $m$ = Market expansion factor (5%)
+                        </p>
+                    </div>
+                </div>
+                <div class="fragment fade-in">
+                    <p><strong>Projected 2026 Revenue:</strong> $11.8B - $12.2B</p>
+                    <p><strong>Target EPS:</strong> $14.50 - $15.00</p>
+                </div>
+                <aside class="notes">
+                    Conservative estimates based on current market conditions.
+                    Assumes no major regulatory changes.
+                    Digital transformation initiatives expected to contribute 30% of growth.
+                </aside>
+            </section>
+
+            <!-- Q&A Slide -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Questions & Discussion
+                    
+                    ### Contact Information
+                    
+                    **Technical Consulting Division**
+                    
+                    📧 Email: 25ds1000013@ds.study.iitm.ac.in
+                    
+                    📊 Investor Relations Portal: [investors.example.com](https://investors.example.com)
+                    
+                    📱 Follow us on LinkedIn for quarterly updates
+                    
+                    ---
+                    
+                    ### Upcoming Events
+                    
+                    - **March 15, 2026:** Annual Shareholder Meeting
+                    - **April 30, 2026:** Q1 2026 Earnings Call
+                    - **June 10, 2026:** Investor Day
+                    
+                    ---
+                    
+                    *Thank you for your continued trust and support*
+                </textarea>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            slideNumber: true,
+            controls: true,
+            progress: true,
+            center: true,
+            plugins: [
+                RevealMarkdown,
+                RevealHighlight,
+                RevealNotes,
+                RevealMath.KaTeX
+            ],
+            math: {
+                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+                TeX: {
+                    Macros: {
+                        R: '\\mathbb{R}',
+                        set: ['\\left\\{#1 \\; ; \\; #2\\right\\}', 2]
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
